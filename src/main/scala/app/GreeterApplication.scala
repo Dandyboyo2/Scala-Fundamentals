@@ -4,14 +4,11 @@ import scala.io.StdIn
 
 object GreeterApplication extends App {
 
-  def greet(name: String): Unit = println(s"Hello $name")
+  val input = StdIn.readLine("Hello, what is your name?\n")
 
-  val name = StdIn.readLine("Hello, what is your name?\n")
+  val person = new Person(input)
 
-  greet(name)
+  println(person.speak())
+
+
 }
-
-
-
-
-
